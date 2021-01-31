@@ -1,0 +1,7 @@
+bayesian-optimization
+matplotlib
+numpy
+pandas
+pandas-profiling
+scikit-learn
+xgboost

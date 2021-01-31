@@ -1,0 +1,23 @@
+SELECT
+  * EXCEPT (i,
+    Police,
+    MTA_Date,
+    MTA_APRP,
+    MTA_FAP,
+    CAMPAIGN_DESC,
+    CLERICAL,
+    P1_PT_EMP_STATUS,
+    paying_guests,
+    HP3_ADDON_POST_REN,
+    HP3_ADDON_PRE_REN,
+    HP2_ADDON_PRE_REN,
+    HP1_ADDON_POST_REN,
+    HP1_ADDON_PRE_REN,
+    OCC_STATUS,
+    LISTED,
+    ROOF_CONSTRUCTION,
+    P1_POLICY_REFUSED,
+    SUBSIDENCE,
+    SAFE_INSTALLED)
+FROM
+  home-insurance-modelling.raw_data.all_data
