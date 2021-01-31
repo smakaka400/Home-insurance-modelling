@@ -1,7 +1,7 @@
 # Modelling Lapsed Policies in Home Insurance
 This repository explores the home insurance 2007-2012 dataset found on [Kaggle](https://www.kaggle.com/ycanario/home-insurance).
 The aim was to explore this dataset, finding some interesting features, and then produce a model to predict future lapsed policies. 
-The structure of the README is as follows:
+The structure of the repository is as follows:
 * The `EDA` folder provides a notebook and SQL scripts for exploratory data analysis as well as some feature engineering.
 * The `Modelling` folder contains a notebook with the remainder of feature engineering, and model development.
 
@@ -9,7 +9,7 @@ This repository makes use of Python and SQL. In order to replicate the results, 
 You will also need the Python packages listed in `requirements.txt`. Finally you will need access to a SQL database of your choice. This project made use of Google BigQuery, which has a free tier for storing data and performing queries.
 
 ## EDA 
-After some exploring of the raw data, understanding which fields might be useful and might not, the following were used in modelling:
+The EDA README in the EDA folder goes into more details on EDA undertaken. After some exploring of the raw data, understanding which fields might be useful and might not, the following were used in modelling:
 * QUOTE_DATE, DATE, date that the quote was made.
 * COVER_START, DATE, date of start of policy.
 * CLAIM3YEARS, BOOLEAN, loss in last 3 years.
@@ -60,6 +60,8 @@ Most were used in their raw state, however a few new features were also derived 
 
 ## Modelling
 In the modelling phase we explored the use of three different models to predict whether a future policy had lapsed or not.
+For more details please see the modelling README in the modelling folder.
+
 In the end, the most performant model was an [XGBoost model](https://xgboost.readthedocs.io/en/latest/), providing an accuracy of 63%, precision of 60%, and recall of 53%. 
 The features that the model found most useful in its construction were LAST_ANN_PREM_GROSS (raw), QUOTE_TO_COVER_DAYS (derived), DOB_YEAR (derived), RISK_RATED_AREA_C (raw), 
 RISK_RATED_AREA_B (raw), COVER_DAY (derived), UNSPEC_HRP_PREM (raw), DOB_DAY (derived).
